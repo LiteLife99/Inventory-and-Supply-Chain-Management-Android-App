@@ -1,1 +1,1 @@
-# Inventory-and-Supply-status-management-android-application
+# Inventory-and-Supply-Chain-management-android-application
