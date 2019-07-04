@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1083329463536",
+    "firebase_url": "https://podarmills-3370b.firebaseio.com",
+    "project_id": "podarmills-3370b",
+    "storage_bucket": "podarmills-3370b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083329463536:android:7b93865417c22e31",
+        "android_client_info": {
+          "package_name": "com.icos.podarmills"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083329463536-56c95p2a6nhk8p2lqdg91upg364h4s4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icos.podarmills",
+            "certificate_hash": "d18d47ed5027d34602989facbe1eb4535b4b60f2"
+          }
+        },
+        {
+          "client_id": "1083329463536-bk5fa10moia0396mgi541g6entfleani.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeyPIlkVIWsOxg0-Pj9SXNuenbegYzaHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083329463536-bk5fa10moia0396mgi541g6entfleani.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
