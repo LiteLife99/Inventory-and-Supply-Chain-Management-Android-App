@@ -7,7 +7,26 @@
     android:orientation="vertical">
 
     <EditText
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/name_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter name"
+        android:imeOptions="actionDone"
+
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter mobile number"
+        android:imeOptions="actionDone"
+
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:layout_marginTop="30dp"
         android:id="@+id/username2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +43,46 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true" />
+
+    <RadioGroup
+
+        android:id="@+id/radio_group_id2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="Client"
+            android:textColor="@android:color/black"
+            android:id="@+id/client"
+            android:layout_gravity="center"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="Admin"
+            android:textColor="@android:color/black"
+            android:id="@+id/admin"
+            android:layout_gravity="center"/>
+    </RadioGroup>
+
+
+
+
+
     <Button
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
