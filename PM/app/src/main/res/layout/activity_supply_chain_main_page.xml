@@ -7,21 +7,21 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/add_order_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Button"
+        android:text="Add order"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="88dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/view_orders_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="View Previous Orders"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="88dp"
         tools:layout_editor_absoluteX="88dp"
