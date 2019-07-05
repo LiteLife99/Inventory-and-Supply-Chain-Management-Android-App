@@ -4,8 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/status_rg">
+
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/radioButton4"
         android:layout_width="match_parent"
         android:layout_height="12dp"
         android:layout_weight="1"
@@ -26,9 +31,11 @@
         android:text="Dispatched" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/radioButton3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Delivered" />
+
+    </RadioGroup>
 </LinearLayout>

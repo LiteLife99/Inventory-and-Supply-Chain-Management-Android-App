@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -54,6 +55,7 @@ public class SupplyChainOrderList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent=new Intent(SupplyChainOrderList.this,SupplyChainOrderDetails.class);
                 intent.putExtra("type","admin");
+                intent.putExtra("orderID",((TextView)view).getText().toString());
                 startActivity(intent);
             }
         });
