@@ -29,6 +29,13 @@ public class OptionPage extends AppCompatActivity {
             }
         });
 
+        supplyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OptionPage.this,SupplyChainMainPage.class));
+            }
+        });
+
         }
 
     private void transitionToInventoryListActivity() {
