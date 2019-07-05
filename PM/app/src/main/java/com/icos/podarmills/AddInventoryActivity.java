@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+
 public class AddInventoryActivity extends AppCompatActivity {
 
     private EditText edtInventoryName;
@@ -23,7 +27,10 @@ public class AddInventoryActivity extends AppCompatActivity {
         edtMaintenanceDate = findViewById(R.id.edtMaintenanceDate);
         addNewInventory = findViewById(R.id.addNewInventory);
 
-        //Ajinkya add these details to firebase then using that, update the ListView in InventoryList activity
+        HashMap<String,Object> hashMap=new HashMap<>();
+        hashMap.put("description",edtInventoryDescription.getText().toString());
+        hashMap.put("maintenanceDate",edtMaintenanceDate.getText().toString());
+        FirebaseFirestore.getInstance().collection("inventory").document(edtInventoryName.getText().toString()).set(hashMap);
 
     }
 }
