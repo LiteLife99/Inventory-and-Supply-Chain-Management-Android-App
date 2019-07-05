@@ -23,7 +23,7 @@ public class AddInventoryActivity extends AppCompatActivity {
         edtMaintenanceDate = findViewById(R.id.edtMaintenanceDate);
         addNewInventory = findViewById(R.id.addNewInventory);
 
-        //Ajinkya add these details to firebase
+        //Ajinkya add these details to firebase then using that, update the ListView in InventoryList activity
 
     }
 }
