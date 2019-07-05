@@ -20,7 +20,22 @@ public class OptionPage extends AppCompatActivity {
         supplyButton = findViewById(R.id.supplyButton);
         complaintsButton = findViewById(R.id.complaintsButton);
 
+        inventoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                transitionToInventoryListActivity();
+
+            }
+        });
+
         }
+
+    private void transitionToInventoryListActivity() {
+
+        Intent intent = new Intent(this, InventoryList.class);
+        startActivity(intent);
+    }
 
     }
 
