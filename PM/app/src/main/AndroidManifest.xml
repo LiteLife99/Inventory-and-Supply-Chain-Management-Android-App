@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".InventoryList"></activity>
+        <activity android:name=".AddInventoryActivity"></activity>
+        <activity android:name=".InventoryList" />
         <activity android:name=".OptionPage" />
         <activity android:name=".CreateUserPage" />
         <activity android:name=".MainActivity">
