@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PodarMills</string>
+    <string name="title_activity_supply_chain">supplyChain</string>
 </resources>

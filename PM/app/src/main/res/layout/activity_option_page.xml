@@ -15,6 +15,7 @@
         android:text="Select any of the following to go to that page"
         android:textSize="30sp" />
 
+
     <Button
         android:id="@+id/inventoryButton"
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:text="SUPPLY CHAIN MANAGEMENT" />
+
 
     <Button
         android:id="@+id/complaintsButton"
