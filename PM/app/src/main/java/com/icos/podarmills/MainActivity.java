@@ -11,9 +11,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class MainActivity extends AppCompatActivity {
     EditText email,password;
@@ -37,8 +41,28 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            Toast.makeText(getApplicationContext(),"Login successsful",Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(MainActivity.this, OptionPage.class));
+                            FirebaseFirestore.getInstance().collection("users").document(emailHead).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                    if(documentSnapshot.get("type").toString().equals("client"))
+                                    {
+                                        Intent i=new Intent(MainActivity.this,SupplyChainOrderDetails.class);
+                                        i.putExtra("type","client");
+
+                                        Toast.makeText(getApplicationContext(),"Login successsful",Toast.LENGTH_LONG).show();
+                                        startActivity(i);
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(getApplicationContext(),"Login successsful",Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(MainActivity.this, OptionPage.class));
+                                    }
+
+
+                                }
+                            });
+
+
                         }
                         else
                         {
