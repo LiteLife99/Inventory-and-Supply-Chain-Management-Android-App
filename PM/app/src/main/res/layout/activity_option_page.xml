@@ -4,18 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionPage">
+    tools:context=".OptionPage"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="Select any of the following to go to that page"
+        android:textSize="30sp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/inventoryButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Data"
-        android:id="@+id/view_data_id"/>
+        android:layout_margin="25dp"
+        android:text="INVENTORY MANAGEMENT" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/supplyButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Data"
-        android:id="@+id/add_data_id"/>
+        android:layout_margin="25dp"
+        android:text="SUPPLY CHAIN MANAGEMENT" />
 
+    <Button
+        android:id="@+id/complaintsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="ANONYMOUS COMPLAINTS PORTAL" />
 </LinearLayout>

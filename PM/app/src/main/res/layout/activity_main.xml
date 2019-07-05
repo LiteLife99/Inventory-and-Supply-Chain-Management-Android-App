@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.029"
-        app:srcCompat="@drawable/NTCLogo" />
+        app:srcCompat="@drawable/ntclogo" />
 
     <Button
         android:id="@+id/login"
