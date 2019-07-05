@@ -6,16 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".OptionPage">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View Data"
-        android:id="@+id/view_data_id"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Data"
-        android:id="@+id/add_data_id"/>
+        <Button
+            android:id="@+id/view_data_id"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:text="View Data"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <Button
+            android:id="@+id/add_data_id"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:text="Add Data"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="118dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
