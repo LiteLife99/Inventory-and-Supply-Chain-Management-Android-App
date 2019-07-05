@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,6 +57,7 @@ public class CreateUserPage extends AppCompatActivity {
                         else
                         {
                             Toast.makeText(getApplicationContext(),"Signup failed, something went wrong. Try again.",Toast.LENGTH_LONG).show();
+                            Log.d("signup error",task.getException().toString());
 
                         }
                     }
