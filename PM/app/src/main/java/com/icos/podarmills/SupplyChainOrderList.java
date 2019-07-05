@@ -30,6 +30,7 @@ public class SupplyChainOrderList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supply_chain_order_list);
+        listView=findViewById(R.id.order_list_id);
         FirebaseFirestore.getInstance().collection("orders").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @TargetApi(Build.VERSION_CODES.N)
             @RequiresApi(api = Build.VERSION_CODES.N)

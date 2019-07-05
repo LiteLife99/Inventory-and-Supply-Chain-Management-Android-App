@@ -39,7 +39,7 @@ public class SupplyChainOrderDetails extends AppCompatActivity {
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     orderNumber.setText(documentSnapshot.get("orderNumber").toString());
                     itemDetails.setText(documentSnapshot.get("itemDetails").toString());
-                    userDetails.setText(documentSnapshot.get("userDetails").toString());
+                    userDetails.setText(documentSnapshot.get("userEmail").toString());
                     status.setText(documentSnapshot.get("status").toString());
                     price.setText(documentSnapshot.get("price").toString());
                     orderID=documentSnapshot.getId();

@@ -23,7 +23,7 @@ public class SupplyChainAddOrder extends AppCompatActivity {
         userDetails=findViewById(R.id.UserDetailsOutput2);
         status=findViewById(R.id.StatusOutput2);
         price=findViewById(R.id.PriceOutput2);
-        addOrder=findViewById(R.id.add_order_button);
+        addOrder=findViewById(R.id.add_order_firebase_button);
 
         addOrder.setOnClickListener(new View.OnClickListener() {
             @Override

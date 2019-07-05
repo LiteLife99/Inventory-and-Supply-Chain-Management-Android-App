@@ -28,6 +28,7 @@ public class SupplyChainStatusChange extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         Intent i=new Intent(SupplyChainStatusChange.this,SupplyChainOrderDetails.class);
                         i.putExtra("orderID",getIntent().getStringExtra("orderID"));
+                        i.putExtra("type","admin");
                         startActivity(i);
                     }
                 });
