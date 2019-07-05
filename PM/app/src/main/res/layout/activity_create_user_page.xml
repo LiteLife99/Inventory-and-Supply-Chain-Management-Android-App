@@ -2,43 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="100dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Enter the following details to Sign Up"
+        android:textSize="30sp" />
 
     <EditText
-        android:layout_marginTop="150dp"
         android:id="@+id/name_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="enter name"
-        android:imeOptions="actionDone"
 
+        android:imeOptions="actionDone"
         android:selectAllOnFocus="true" />
 
     <EditText
         android:id="@+id/mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+
         android:hint="enter mobile number"
         android:imeOptions="actionDone"
-
         android:selectAllOnFocus="true" />
 
     <EditText
-        android:layout_marginTop="30dp"
         android:id="@+id/username2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="enter email"
-        android:imeOptions="actionDone"
 
+        android:imeOptions="actionDone"
         android:selectAllOnFocus="true" />
+
     <EditText
-        android:layout_marginTop="30dp"
         android:id="@+id/password2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:hint="enter password"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -49,47 +60,44 @@
         android:id="@+id/radio_group_id2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
 
         <RadioButton
+            android:id="@+id/client"
             android:layout_width="0dp"
-            android:layout_weight="0.5"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
             android:text="Client"
             android:textColor="@android:color/black"
-            android:id="@+id/client"
-            android:layout_gravity="center"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <RadioButton
+            android:id="@+id/admin"
             android:layout_width="0dp"
-            android:layout_weight="0.5"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
             android:text="Admin"
             android:textColor="@android:color/black"
-            android:id="@+id/admin"
-            android:layout_gravity="center"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
     </RadioGroup>
 
 
-
-
-
     <Button
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
+        android:id="@+id/create_user"
+        android:layout_width="108dp"
         android:layout_height="wrap_content"
-        android:text="create user"
-        android:id="@+id/create_user"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="SIGN UP" />
 
 
 </LinearLayout>

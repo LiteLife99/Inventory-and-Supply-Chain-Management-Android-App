@@ -10,26 +10,32 @@ import android.widget.Button;
 import com.icos.podarmills.R;
 
 public class OptionPage extends AppCompatActivity {
-    Button viewData,addData;
+    private Button inventoryButton, supplyButton, complaintsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option_page);
-        viewData=findViewById(R.id.view_data_id);
-        addData=findViewById(R.id.add_data_id);
-        viewData.setOnClickListener(new View.OnClickListener() {
+
+        inventoryButton = findViewById(R.id.inventoryButton);
+        supplyButton = findViewById(R.id.supplyButton);
+        complaintsButton = findViewById(R.id.complaintsButton);
+
+        inventoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                transitionToInventoryListActivity();
 
             }
         });
 
-        addData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        }
 
-            }
-        });
+    private void transitionToInventoryListActivity() {
+
+        Intent intent = new Intent(this, InventoryList.class);
+        startActivity(intent);
+    }
 
     }
-}
+

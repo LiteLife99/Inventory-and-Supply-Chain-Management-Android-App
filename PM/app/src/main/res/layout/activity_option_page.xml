@@ -4,27 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionPage">
+    tools:context=".OptionPage"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="Select any of the following to go to that page"
+        android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/view_data_id"
-            android:layout_width="250dp"
-            android:layout_height="57dp"
-            android:text="View Data"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="26dp" />
 
-        <Button
-            android:id="@+id/add_data_id"
-            android:layout_width="250dp"
-            android:layout_height="57dp"
-            android:text="Add Data"
-            tools:layout_editor_absoluteX="80dp"
-            tools:layout_editor_absoluteY="118dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/inventoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="INVENTORY MANAGEMENT" />
 
+    <Button
+        android:id="@+id/supplyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="SUPPLY CHAIN MANAGEMENT" />
+
+
+    <Button
+        android:id="@+id/complaintsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="ANONYMOUS COMPLAINTS PORTAL" />
 </LinearLayout>
