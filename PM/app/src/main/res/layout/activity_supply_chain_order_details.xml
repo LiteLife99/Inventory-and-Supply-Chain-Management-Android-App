@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/StatusTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="111dp"
+            android:layout_marginRight="111dp"
+            android:layout_weight="1"
+            android:text="Status"
+            app:layout_constraintEnd_toStartOf="@+id/StatusOutput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserDetailsTV" />
+
+        <TextView
+            android:id="@+id/UserDetailsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_weight="1"
+            android:text="User Details"
+            app:layout_constraintEnd_toStartOf="@+id/UserDetailsOutput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ItemDetailsTV" />
+
+        <TextView
+            android:id="@+id/ItemDetailsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_weight="1"
+            android:text="Item Details"
+            app:layout_constraintEnd_toStartOf="@+id/ItemDetailsOutput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/OrderNumberTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_weight="1"
+            android:text="Item Number"
+            app:layout_constraintEnd_toStartOf="@+id/OrderNumberOutput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ItemDetailsOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:layout_marginBottom="18dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/UserDetailsOutput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ItemDetailsTV" />
+
+        <TextView
+            android:id="@+id/OrderNumberOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:layout_marginBottom="20dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/ItemDetailsOutput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/OrderNumberTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/UserDetailsOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/UserDetailsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/UserDetailsTV"
+            app:layout_constraintTop_toTopOf="@+id/UserDetailsTV" />
+
+        <TextView
+            android:id="@+id/StatusOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/StatusTV"
+            app:layout_constraintTop_toBottomOf="@+id/UserDetailsOutput" />
+
+        <TextView
+            android:id="@+id/PriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="14dp"
+            android:text="Price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StatusTV" />
+
+        <TextView
+            android:id="@+id/PriceOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/StatusOutput"
+            app:layout_constraintTop_toBottomOf="@+id/StatusOutput" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:text="Change Status"
+            app:layout_constraintEnd_toEndOf="@+id/PriceOutput"
+            app:layout_constraintTop_toBottomOf="@+id/PriceOutput" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
