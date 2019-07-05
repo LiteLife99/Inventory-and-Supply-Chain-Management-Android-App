@@ -6,24 +6,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        android:text="Button"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="88dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        <Button
+            android:id="@+id/ViewOrder"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="88dp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="0dp" />
+            android:gravity="center"
+            android:text="View Order"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="88dp"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="71dp" />
+
+        <Button
+            android:id="@+id/AddNewOrder"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:gravity="center"
+            android:text="Add New Order"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="88dp"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="201dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
