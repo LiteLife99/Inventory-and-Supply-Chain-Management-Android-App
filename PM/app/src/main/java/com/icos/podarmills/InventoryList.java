@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -55,6 +56,15 @@ public class InventoryList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(InventoryList.this,AddInventoryActivity.class));
+            }
+        });
+
+        inventoryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent=new Intent(InventoryList.this,InventoryDetails.class);
+                intent.putExtra("inventoryID",inventoryNames.get(i));
+                startActivity(intent);
             }
         });
 
