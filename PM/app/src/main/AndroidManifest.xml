@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ComplaintsPage"></activity>
+        <activity android:name=".InventoryDetails"></activity>
+        <activity android:name=".AddMaintenance" />
         <activity android:name=".SupplyChainStatusChange" />
         <activity android:name=".SupplyChainMainPage" />
         <activity android:name=".SupplyChainAddOrder" />
