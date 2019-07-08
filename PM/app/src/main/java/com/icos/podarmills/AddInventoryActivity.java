@@ -16,7 +16,7 @@ public class AddInventoryActivity extends AppCompatActivity {
 
     private EditText edtInventoryName;
     private EditText edtInventoryDescription;
-    private EditText edtMaintenanceDate;
+    //private EditText edtMaintenanceDate;
     private Button addNewInventory;
 
     @Override
@@ -26,7 +26,7 @@ public class AddInventoryActivity extends AppCompatActivity {
 
         edtInventoryName = findViewById(R.id.edtInventoryName);
         edtInventoryDescription = findViewById(R.id.edtInventoryDescription);
-        edtMaintenanceDate = findViewById(R.id.edtMaintenanceDate);
+        //edtMaintenanceDate = findViewById(R.id.edtMaintenanceDate);
         addNewInventory = findViewById(R.id.addNewInventory);
 
         addNewInventory.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +34,7 @@ public class AddInventoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 HashMap<String,Object> hashMap=new HashMap<>();
                 hashMap.put("description",edtInventoryDescription.getText().toString());
-                hashMap.put("maintenanceDate",edtMaintenanceDate.getText().toString());
+                //hashMap.put("maintenanceDate",edtMaintenanceDate.getText().toString());
 
                 FirebaseFirestore.getInstance().collection("inventory").document(edtInventoryName.getText().toString()).set(hashMap);
                 startActivity(new Intent(new Intent(AddInventoryActivity.this,InventoryList.class)));
