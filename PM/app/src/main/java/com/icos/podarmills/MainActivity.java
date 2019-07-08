@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
     EditText email,password;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                     else
                                     {
+                                        FirebaseMessaging.getInstance().subscribeToTopic("maintenance");
                                         Toast.makeText(getApplicationContext(),"Login successsful",Toast.LENGTH_LONG).show();
                                         startActivity(new Intent(MainActivity.this, OptionPage.class));
                                     }

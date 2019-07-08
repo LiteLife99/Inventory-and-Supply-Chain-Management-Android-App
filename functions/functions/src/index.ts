@@ -8,6 +8,7 @@
 
 import admin = require('firebase-admin');
 import functions = require('firebase-functions');
+admin.initializeApp();
 // const SENDGRID_API_KEY = functions.config().sendgrid.key;
 
 // import sgMail = require('@sendgrid/mail');
@@ -58,30 +59,32 @@ functions.https.onRequest((req,res)=>{
     let notifString="Machines:"
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    let reqd=false
+    let reqd=false;
     admin.firestore().collection('inventory').get().then(qs=>{
-        
-        
+        console.log("entering foreach with date");
+        console.log(date);
         qs.forEach(ds=>{
             if(ds.get('date')===date)
             {
                 reqd=true;
                 notifString=notifString+' '+ds.id+',';
             }
-        })
+        });
+        console.log("finished foreach");
         notifString=notifString+' require maintenance';
-    })
-    
-    const payload={
-        data:{
-            name:"Maintenance Reqiured",
-            msg:notifString
-        },
-        topic:"maintenance"
-    };
-    if(reqd)
-    {
-        return  admin.messaging().send(payload)
+        console.log("preparing to deploy payload");
+        const payload={
+            data:{
+                name:"Maintenance Reqiured",
+                msg:notifString
+            },
+            topic:"maintenance"
+        };
+        if(reqd)
+        {
+            res.send("if - Hello from Firebase!");
+            console.log("deploying now");
+            admin.messaging().send(payload)
             .then((response) => {
                 console.log('This was the notification Feature',response);
                 return 0;
@@ -89,13 +92,18 @@ functions.https.onRequest((req,res)=>{
                 console.log(`Error sending Notification`, error);
                 throw error;
             });
-    }
-    else
-    {
-        return
-    }
+
+        }
+        else
+        {
+            res.send("else - Hello from Firebase!");
+        }
+        
+        
+    }).catch((err: any)=>{
+        console.log(err);
+        res.send("Hello from the catch block!");
+    })
 
 
 });
-
-

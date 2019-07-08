@@ -38,7 +38,7 @@ public class AddMaintenance extends AppCompatActivity {
         cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView calendarView, int i, int i1, int i2) {
-                selectedDate=String.valueOf(i)+"-"+String.valueOf(i1)+"-"+String.valueOf(i2);
+                selectedDate=String.valueOf(i)+"-"+String.valueOf(i1+1)+"-"+String.valueOf(i2);
             }
         });
 
