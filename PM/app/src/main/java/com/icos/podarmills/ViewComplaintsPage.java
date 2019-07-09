@@ -27,14 +27,16 @@ public class ViewComplaintsPage extends AppCompatActivity {
     private Button btnWriteComplaint;
     private ListView complaintsList;
     private ArrayList<String> complaintNames;
+    private ArrayList<String> complaintIds;
     private ArrayAdapter adapter;
+    private int numComps=0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_complaints_page);
-
+        complaintIds=new ArrayList<>();
         txtViewComplaints = findViewById(R.id.txtViewComplaint);
         btnWriteComplaint = findViewById(R.id.writeComplaint);
         complaintsList = (ListView) findViewById(R.id.complaintListView);
@@ -45,7 +47,7 @@ public class ViewComplaintsPage extends AppCompatActivity {
         complaintsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                FirebaseFirestore.getInstance().collection("complaints").document(complaintNames.get(i)).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                FirebaseFirestore.getInstance().collection("complaints").document(complaintIds.get(i)).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         txtViewComplaints.setText(documentSnapshot.get("complaint").toString());
@@ -69,7 +71,11 @@ public class ViewComplaintsPage extends AppCompatActivity {
                 queryDocumentSnapshots.getDocuments().forEach(new Consumer<DocumentSnapshot>() {
                     @Override
                     public void accept(DocumentSnapshot documentSnapshot) {
-                        complaintNames.add(documentSnapshot.getId());
+                        numComps++;
+                        complaintNames.add("Complaint number "+numComps);
+                        complaintIds.add(documentSnapshot.getId());
+                        if(adapter!=null)
+                        adapter.notifyDataSetChanged();
                     }
                 });
 
