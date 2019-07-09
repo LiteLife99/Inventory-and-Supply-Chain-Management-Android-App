@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtViewComplaint" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/writeComplaint"
         android:layout_width="190dp"
         android:layout_height="53dp"
         android:layout_marginTop="364dp"
