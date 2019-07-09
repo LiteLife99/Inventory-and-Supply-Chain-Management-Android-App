@@ -49,6 +49,11 @@
                 android:name="com.google.firebase.messaging.default_notification_color"
                 android:resource="@color/colorPrimary" />
         </service>
+
     </application>
+
+    <permission android:name="com.name.name.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.name.name.permission.C2D_MESSAGE" />
 
 </manifest>
