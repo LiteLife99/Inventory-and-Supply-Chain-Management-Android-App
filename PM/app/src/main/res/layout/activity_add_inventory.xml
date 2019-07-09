@@ -9,36 +9,47 @@
 
     <EditText
         android:id="@+id/edtInventoryDescription"
-        android:layout_width="313dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="176dp"
         android:ems="10"
         android:hint="Enter Inventory item description"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/addNewInventory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtInventoryName" />
 
     <EditText
         android:id="@+id/edtInventoryName"
-        android:layout_width="311dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
         android:layout_marginTop="80dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="56dp"
         android:ems="10"
         android:hint="Enter Inventory item name"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtInventoryDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addNewInventory"
         android:layout_width="247dp"
-        android:layout_height="47dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="152dp"
         android:text="Add this inventory"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="404dp" />
+        app:layout_constraintTop_toBottomOf="@+id/edtInventoryDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>
