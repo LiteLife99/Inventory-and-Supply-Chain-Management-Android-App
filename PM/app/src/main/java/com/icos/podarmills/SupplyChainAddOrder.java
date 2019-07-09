@@ -32,7 +32,7 @@ public class SupplyChainAddOrder extends AppCompatActivity {
                 HashMap<String,Object> hm=new HashMap<>();
                 hm.put("orderNumber",orderNumber.getText().toString());
                 hm.put("itemDetails",itemDetails.getText().toString());
-                hm.put("userEmail",itemDetails.getText().toString());
+                hm.put("userEmail",userDetails.getText().toString());
                 hm.put("status",status.getText().toString());
                 hm.put("price",price.getText().toString());
                 FirebaseFirestore.getInstance().collection("orders").document(orderNumber.getText().toString()).set(hm);
