@@ -11,33 +11,17 @@
         android:id="@+id/add_order_button"
         android:layout_width="169dp"
         android:layout_height="71dp"
-
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginLeft="113dp"
-        android:layout_marginTop="187dp"
-        android:text="Add order"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="88dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Add order" />
 
     <Button
         android:id="@+id/view_orders_button"
         android:layout_width="230dp"
         android:layout_height="79dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginLeft="91dp"
-        android:layout_marginTop="291dp"
-        android:text="View Previous Orders"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="88dp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_below="@+id/add_order_button"
+
+        android:layout_centerHorizontal="true"
+        android:text="View Previous Orders" />
 
 </RelativeLayout>
