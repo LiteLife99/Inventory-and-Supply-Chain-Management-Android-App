@@ -35,7 +35,7 @@ public class SupplyChainAddOrder extends AppCompatActivity {
                 hm.put("userEmail",itemDetails.getText().toString());
                 hm.put("status",status.getText().toString());
                 hm.put("price",price.getText().toString());
-                FirebaseFirestore.getInstance().collection("orders").add(hm);
+                FirebaseFirestore.getInstance().collection("orders").document(orderNumber.getText().toString()).set(hm);
                 startActivity(new Intent(SupplyChainAddOrder.this,SupplyChainMainPage.class));
             }
         });
