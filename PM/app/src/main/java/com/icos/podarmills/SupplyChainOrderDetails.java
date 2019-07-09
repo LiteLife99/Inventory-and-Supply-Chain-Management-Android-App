@@ -10,8 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 
@@ -34,6 +36,8 @@ public class SupplyChainOrderDetails extends AppCompatActivity {
 
         if(getIntent().getStringExtra("type").equals("admin"))
         {
+            changeStatus.setVisibility(View.VISIBLE);
+            changeStatus.setEnabled(true);
             FirebaseFirestore.getInstance().collection("orders").document(getIntent().getStringExtra("orderID")).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -47,6 +51,28 @@ public class SupplyChainOrderDetails extends AppCompatActivity {
                 }
             });
         }
+        if(getIntent().getStringExtra("type").equals("client")) {
+            changeStatus.setVisibility(View.INVISIBLE);
+            changeStatus.setEnabled(false);
+            FirebaseFirestore.getInstance().collection("orders").whereEqualTo("userEmail", MainActivity.emailHead).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                @Override
+                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    DocumentSnapshot documentSnapshot=queryDocumentSnapshots.getDocuments().get(0);
+                    orderNumber.setText(documentSnapshot.get("orderNumber").toString());
+                    itemDetails.setText(documentSnapshot.get("itemDetails").toString());
+                    userDetails.setText(documentSnapshot.get("userEmail").toString());
+                    status.setText(documentSnapshot.get("status").toString());
+                    price.setText(documentSnapshot.get("price").toString());
+                    orderID=documentSnapshot.getId();
+
+
+                }
+            });
+        }
+
+
+
+
 
         changeStatus.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                                     {
                                         Intent i=new Intent(MainActivity.this,SupplyChainOrderDetails.class);
                                         i.putExtra("type","client");
-
                                         Toast.makeText(getApplicationContext(),"Login successsful",Toast.LENGTH_LONG).show();
                                         startActivity(i);
                                     }
