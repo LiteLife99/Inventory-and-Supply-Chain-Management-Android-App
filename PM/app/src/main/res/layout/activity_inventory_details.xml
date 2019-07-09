@@ -39,18 +39,17 @@
 
     <TextView
         android:id="@+id/DateTV"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="33dp"
+        android:layout_width="190dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Maintenance Scheduled On"
-        app:layout_constraintBottom_toBottomOf="@+id/DateOutput"
-        app:layout_constraintEnd_toStartOf="@+id/DateOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/DateOutput"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteY="199dp" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -100,8 +99,8 @@
 
     <TextView
         android:id="@+id/InventoryOutputTV"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="158dp"
+        android:layout_height="36dp"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="77dp"
         android:layout_marginRight="77dp"
@@ -113,8 +112,8 @@
 
     <TextView
         android:id="@+id/DescriptionOutput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="212dp"
+        android:layout_height="37dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
         android:layout_marginBottom="83dp"
@@ -125,16 +124,14 @@
 
     <EditText
         android:id="@+id/DateOutput"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginRight="59dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="171dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/checkBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/DateTV"
-        app:layout_constraintTop_toBottomOf="@+id/DescriptionOutput" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
