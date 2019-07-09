@@ -2,6 +2,7 @@ package com.icos.podarmills;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,7 @@ public class SupplyChainAddOrder extends AppCompatActivity {
                 hm.put("status",status.getText().toString());
                 hm.put("price",price.getText().toString());
                 FirebaseFirestore.getInstance().collection("orders").add(hm);
+                startActivity(new Intent(SupplyChainAddOrder.this,SupplyChainMainPage.class));
             }
         });
 
