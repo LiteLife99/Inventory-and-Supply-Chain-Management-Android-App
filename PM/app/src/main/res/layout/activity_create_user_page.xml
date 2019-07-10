@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0.5"
-            android:text="Client"
+            android:text="client"
             android:textColor="@android:color/black"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0.5"
-            android:text="Admin"
+            android:text="admin"
             android:textColor="@android:color/black"
             android:textSize="30dp"
             android:textStyle="bold" />
